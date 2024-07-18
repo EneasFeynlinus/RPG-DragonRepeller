@@ -88,15 +88,15 @@ function buyHealth(){
 }
 
 function buyWeapon(){
-    if(currentWeaponIndex < weapons.length - 1){
+    if(currentWeaponIndex < weapons.length - 1){//If you have already the most powerfull weapon index less than whole array.
         if(gold >= 30){
-            gold -= 30;
-            currentWeaponIndex++;
-            goldText.innerText = gold;
-            let newWeapon = weapons[currentWeaponIndex].name;
-            text.innerText = "You now have a " + newWeapon + ".";
-            inventory.push(newWeapon);
-            text.innerText += " In your inventory you have: " + inventory + ".";
+            gold -= 30; //Subtracting the gold you had
+            currentWeaponIndex++; // updating our weapon object incrementing the array index.
+            goldText.innerText = gold;// updating our gold value by the referenced goldText.
+            let newWeapon = weapons[currentWeaponIndex].name;//Assingning the string weapon name with the new index
+            text.innerText = "You now have a " + newWeapon + ".";// Forming a new string concatenated with new weapon name.
+            inventory.push(newWeapon);//Updating our inventory array with push stack method.
+            text.innerText += " In your inventory you have: " + inventory + ".";// assing to text the concateneted string and inventory
         } else {
             text.innerText = "You do not have enough gold to buy a weapon.";
         }
@@ -113,11 +113,10 @@ function sellWeapon () {
         goldText.innerText = gold;
         let currentWeapon = inventory.shift();
         text.innerText = "You sold a " + currentWeapon + ".";
-        // inventory.pop();
-        // text.innerText = "You sold your weapon for 15 gold.";
-        // text.innerText += " In your inventory you have: " + inventory + ".";
-        // button2.innerText = "Buy weapon (30 gold)";
-        // button2.onclick = buyWeapon;
+        text.innerText = " In your inventory you have: " + inventory + " "
+    }
+    else {
+        text.innerText = "Don't sell your only weapon!";
     }
 }
 
