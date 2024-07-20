@@ -75,10 +75,6 @@ function goCave() {
     update(locations[2]);
 }
 
-function fightDragon() {
-    console.log("Fighting the dragon.");
-}
-
 function buyHealth(){
     if(gold >= 10) {
         gold -= 10;
@@ -125,10 +121,19 @@ function sellWeapon () {
 }
 
 function fightSlime() {
-
+    fighting = 0 - monsters.indexOf(monsters.name == "slime");
+    goFight();
 }
 
 function fightBeast() {
+
+}
+
+function fightDragon() {
+    console.log("Fighting the dragon.");
+}
+
+function goFight() {
 
 }
 
