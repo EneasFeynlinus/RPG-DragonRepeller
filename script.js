@@ -3,7 +3,7 @@ let health = 100;
 let gold = 50;
 let currentWeaponIndex = 0;
 let fighting;
-let monsterHelth;
+let monsterHealth;
 let inventory = ["stick"];
 
 const button1 = document.querySelector("#button1");
@@ -142,7 +142,8 @@ function fightDragon() {
 }
 
 function goFight() {
-    update(locations[3])
+    update(locations[3]);
+    monsterHealth = monsters[fighting].health;
 }
 
 function attack() {
