@@ -139,10 +139,10 @@ function goFight() {
 
 }
 
-console.log(button1)
-console.log(button2)
-console.log(button3)
-console.log(text)
-console.log(button3)
-console.log(button3)
-console.log(locations[1])
+function attack() {
+
+}
+
+function dodge() {
+    
+}
