@@ -89,7 +89,7 @@ function buyHealth(){
         goldText.innerText = gold;
         healthText.innerText = health;
     } else {
-        text.innerText = "You do not have anough gold to buy health.";
+        text.innerText = "You do not have enough gold to buy health.";
     }
 }
 
@@ -166,11 +166,11 @@ function attack() {
 }
 
 function dodge() {
-
+    text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
 }
 
 function defeatMonster() {
-
+    gold += Math.floor(monsters[fighting].level * 6.7);
 }
 
 function lose() {
