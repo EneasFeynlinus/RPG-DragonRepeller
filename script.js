@@ -87,12 +87,12 @@ function buyHealth(){
         gold -= 10;
         health += 10;
         goldText.innerText = gold;
-        let newWeapon = weapons;
         healthText.innerText = health;
     } else {
         text.innerText = "You do not have anough gold to buy health.";
     }
 }
+
 
 function buyWeapon(){
     if(currentWeaponIndex < weapons.length - 1){//If you have already the most powerfull weapon index less than whole array.
@@ -174,5 +174,5 @@ function defeatMonster() {
 }
 
 function lose() {
-    
+
 }
