@@ -219,3 +219,7 @@ function restart () {
     xpText.innerText = xp;
     goTown();
 }
+
+function getMonsterAttackValue(level) {
+    
+}
