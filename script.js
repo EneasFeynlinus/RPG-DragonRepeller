@@ -190,6 +190,15 @@ function attack() {
     }
 }
 
+function getMonsterAttackValue(level) {
+    const hit = (level * 5) - (Math.floor(Math.random() * xp));
+    return hit > 0 ? hit : 0;
+}
+
+function isMonsterHit() {
+    return Math.random() > .2;
+}
+
 function dodge() {
     text.innerText = "You dodge the attack from the " + monsters[fighting].name + ".";
 }
@@ -220,9 +229,4 @@ function restart () {
     healthText.innerText = health;
     xpText.innerText = xp;
     goTown();
-}
-
-function getMonsterAttackValue(level) {
-    const hit = (level * 5) - (Math.floor(Math.random() * xp));
-    return hit > 0 ? hit : 0;
 }
